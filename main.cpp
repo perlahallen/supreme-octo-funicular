@@ -2,7 +2,7 @@
 #include <array>
 
 int main() {
-    std::cout << "Hello, world!\n";
+    std::cout << "Hello,  \n";
     std::array<int, 100> v{};
     int nr;
     std::cout << "Introduceți nr: ";
