@@ -1,0 +1,3 @@
+C:/Users/Acer/CLionProjects/simple1/cmake-build-debug/CMakeFiles/simple1.dir
+C:/Users/Acer/CLionProjects/simple1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Acer/CLionProjects/simple1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
