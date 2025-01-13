@@ -38,15 +38,19 @@ public:
             throw std::runtime_error("Registration is closed. No more candidates can be registered.");
         }
 
-        double eventScore;
+        if (eventParameter < 0) {
+            throw std::invalid_argument("Event parameter must be non-negative.");
+        }
+
+        double eventScore = 0.0;
         if (eventName == "Sprint") {
             eventScore = eventParameter <= 10 ? 9.0 : 12.0;
         } else if (eventName == "Cross") {
             eventScore = eventParameter <= 30 ? 9.0 : 12.0;
         } else if (eventName == "Semi-marathon" || eventName == "Marathon") {
-            eventScore = eventParameter > 50 ? 9.0 : 12.0;
+            eventScore = eventParameter <= 50 ? 12.0 : 9.0;
         } else {
-            throw std::invalid_argument("Invalid event type provided.");
+            throw std::invalid_argument("Invalid event type provided: " + eventName);
         }
 
         candidates.emplace_back(std::move(firstName), std::move(lastName), std::move(dateOfBirth), std::move(eventName), eventScore);
